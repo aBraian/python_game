@@ -104,6 +104,10 @@ def screen_level_1(screen, dict_audio, menu, player):
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_m: 
                         dict_audio.mute() 
+                    if event.key == pygame.K_p:
+                        audio_level_1.stop_audio()
+                        menu.option = "4"
+                        running = False
                 if event.type == timer_time:
                     time -= 1
                 if event.type == timer_enemy_2:

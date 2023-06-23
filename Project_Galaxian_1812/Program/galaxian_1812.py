@@ -7,6 +7,7 @@ from screen_leaderboard import *
 from screen_main_menu import *
 from screen_menu_levels import *
 from screen_menu import *
+from screen_tutorial import *
 
 pygame.init()
 
@@ -51,7 +52,7 @@ while running:
     if menu.option == "1":
         screen_menu_levels(main_screen, dict_audio, menu, player)
     elif menu.option == "2":
-        pass
+        screen_tutorial(main_screen, menu)
     elif menu.option == "3":
         screen_leaderboard(main_screen, menu, list_scores)
     if menu.option == "0":

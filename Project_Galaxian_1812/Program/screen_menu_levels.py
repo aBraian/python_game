@@ -26,9 +26,8 @@ def screen_menu_levels(screen, dict_audio, menu, player):
                 if screen_level_3(screen, dict_audio, menu, player):
                     game_completed = True
                 else:
-                    screen_name_input(screen, menu, player)
                     running = False
-            if not running and menu.option != "0":
+            if not running and menu.option != "0" and menu.option != "4":
                 screen_name_input(screen, menu, player)
             if game_completed:
                 screen_congratulations(screen, menu, player)

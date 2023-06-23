@@ -120,6 +120,10 @@ def screen_level_3(screen, dict_audio, menu, player):
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_m: 
                         dict_audio.mute()     
+                    if event.key == pygame.K_p:
+                        audio_level_3.stop_audio()
+                        menu.option = "4"
+                        running = False
                 if event.type == timer_enemy_2:
                     list_e2.spawn(enemy_2, 3)
                 if event.type == timer_enemy_3:
